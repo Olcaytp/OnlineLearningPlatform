@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Education Service - Course List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .course-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-item {
+            background-color: #e8e8e8;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+        .course-item:hover {
+            background-color: #d3d3d3;
+        }
+        .course-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .course-description {
+            margin: 10px 0;
+        }
+        .course-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Online Education Service</h1>
+    </header>
+    <div class="container">
+        <h1>Available Courses</h1>
+        <ul class="course-list">
+            <li class="course-item">
+                <span class="course-title">Introduction to Computer Science</span>
+                <p class="course-description">Learn the basics of computer science and programming using Python.</p>
+                <div class="course-info">
+                    <span>Course Code: CS101</span>
+                    <span>Duration: 6 weeks</span>
+                </div>
+            </li>
+            <li class="course-item">
+                <span class="course-title">Data Structures and Algorithms</span>
+                <p class="course-description">Explore fundamental data structures and algorithms to enhance your problem-solving skills.</p>
+                <div class="course-info">
+                    <span>Course Code: CS201</span>
+                    <span>Duration: 8 weeks</span>
+                </div>
+            </li>
+            <li class="course-item">
+                <span class="course-title">Web Development</span>
+                <p class="course-description">Learn to build modern web applications using HTML, CSS, and JavaScript.</p>
+                <div class="course-info">
+                    <span>Course Code: CS301</span>
+                    <span>Duration: 10 weeks</span>
+                </div>
+            </li>
+            <li class="course-item">
+                <span class="course-title">Database Systems</span>
+                <p class="course-description">Understand the principles of database systems and learn SQL for database management.</p>
+                <div class="course-info">
+                    <span>Course Code: CS401</span>
+                    <span>Duration: 8 weeks</span>
+                </div>
+            </li>
+            <li class="course-item">
+                <span class="course-title">Machine Learning</span>
+                <p class="course-description">Gain insights into machine learning concepts and techniques with hands-on projects.</p>
+                <div class="course-info">
+                    <span>Course Code: CS501</span>
+                    <span>Duration: 12 weeks</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

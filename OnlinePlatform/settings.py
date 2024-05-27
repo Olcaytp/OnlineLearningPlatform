@@ -15,12 +15,11 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
+TEMPLATE_DIR = str(BASE_DIR / 'templates')  # Convert Path object to string
 
 # Path to the users and courses templates directories
-USERS_TEMPLATES_DIR = BASE_DIR / 'CourseApp' / 'templates'
-COURSES_TEMPLATES_DIR = BASE_DIR / 'UserApp' / 'templates'
-
+USERS_TEMPLATES_DIR = str(BASE_DIR / 'CourseApp' / 'templates')  # Convert Path object to string
+COURSES_TEMPLATES_DIR = str(BASE_DIR / 'UserApp' / 'templates')  # Convert Path object to string
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -32,7 +31,6 @@ SECRET_KEY = 'django-insecure-75k)2--0g$#i_$x@s0(ppo4!ak45g1cx%*vl)%pi#j!g96jgao
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -81,17 +79,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'OnlinePlatform.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),  # Convert Path object to string
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -111,7 +107,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -122,7 +117,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
