@@ -79,13 +79,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <!-- Search course -->
-                  <!--  <li class="nav-item">
-                        <form class="form-inline my-2 my-lg-0" method="GET" action="{% url 'search_courses' %}">
+                  <li class="nav-item">
+                        <form class="form-inline my-2 my-lg-0" method="GET">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search course" aria-label="Search" name="query">
                             <button class="btn search-button btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                         </form>
                     </li>
-                </ul> -->
+                </ul>
                 <ul class="navbar-nav ml-auto">
                     <!-- Course list -->
                     <li class="nav-item">
@@ -94,14 +94,17 @@
                     <!-- User authentication links -->
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'user_logout' %}">Logout</a>
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                     </li>
+                    {% comment %}<li class="nav-item">
+                        <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                    </li>{% endcomment %}
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'user_login' %}">Login</a>
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'user_register' %}">Register</a>
+                        <a class="nav-link" href="{% url 'register' %}">Register</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -126,7 +129,7 @@
         {% endif %}
     </div>
     <!-- Main content -->
-    <div class="container mt-5 content">
+    <div class="container content">
         {% block content %}
         {% endblock %}
     </div>
